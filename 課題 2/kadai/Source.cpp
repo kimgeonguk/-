@@ -45,7 +45,8 @@ INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR szStr, INT iCmdSh
 	wndclass.cbSize = sizeof(wndclass);
 	wndclass.style = CS_HREDRAW | CS_VREDRAW;
 	wndclass.lpfnWndProc = WndProc;
-	wndclass.cbClsExtra = wndclass.cbWndExtra = 0;
+	wndclass.cbClsExtra = 0;
+	wndclass.cbWndExtra = 0;
 	wndclass.hInstance = hInst;
 	wndclass.hIcon = LoadIcon(NULL, IDI_APPLICATION);
 	wndclass.hCursor = LoadCursor(NULL, IDC_ARROW);
@@ -54,9 +55,12 @@ INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR szStr, INT iCmdSh
 	wndclass.lpszClassName = szAppName;
 	wndclass.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
 	//Windowの登録
+	
 	RegisterClassEx(&wndclass);
 	//Windowの生成
+	
 	hWnd = CreateWindow(szAppName, szAppName, WS_OVERLAPPEDWINDOW, 0, 0, 640, 480, NULL, NULL, hInst, NULL);
+	
 	ShowWindow(hWnd, SW_SHOW);
 	UpdateWindow(hWnd);
 

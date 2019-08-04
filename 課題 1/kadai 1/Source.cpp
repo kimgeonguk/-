@@ -4,8 +4,6 @@
 
 LRESULT CALLBACK WindowProc(HWND, UINT, WPARAM, LPARAM);
 
-
-
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,
 
 	LPSTR cmdLine, int nCmdShow)
@@ -48,7 +46,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,
 
 
 
-	HWND hWindow = CreateWindow(pClassName, "ジョンバーだ、ジョンバーが答えだ。",
+	HWND hWindow = CreateWindow(pClassName, "Exercise",
 
 		WS_OVERLAPPEDWINDOW,
 
@@ -62,19 +60,14 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,
 
 	ShowWindow(hWindow, nCmdShow);
 
-
-
 	MSG msg;
 
 	while (GetMessage(&msg, NULL, 0, 0))
 
 	{
-
 		TranslateMessage(&msg);
 
 		DispatchMessage(&msg);
-
-
 
 		Sleep(1);
 
