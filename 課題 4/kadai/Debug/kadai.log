@@ -1,3 +1,4 @@
 ﻿  Source.cpp
   C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-  kadai.vcxproj -> C:\Users\81701\Desktop\前期課題\課題 4\Debug\kadai.exe
+C:\Users\81701\Desktop\前期課題\課題\課題 4\kadai\Source.cpp(239): warning C4715: 'InitD3d': 値を返さないコントロール パスがあります。
+  kadai.vcxproj -> C:\Users\81701\Desktop\前期課題\課題\課題 4\Debug\kadai.exe
